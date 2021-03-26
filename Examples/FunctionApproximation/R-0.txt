@@ -1,0 +1,5 @@
+Input,12
+Hidden1,96,sigmoid
+Hidden2,48,sigmoid
+Hidden2,24,sigmoid
+Output,12,linearMse

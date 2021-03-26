@@ -1,0 +1,5 @@
+Input,784
+Hidden1,100,sigmoid
+Hidden1,100,sigmoid
+Hidden2,40,sigmoid
+Output,10,softmaxCrossentropy
