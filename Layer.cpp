@@ -3,7 +3,7 @@
 Layer::Layer() { }
 
 Layer::~Layer() {
-	delete W; delete B; delete dW; delete dB; delete activationValue; delete derivateActivation; delete outputValue; delete backpropagetedError;
+	delete[] W; delete[] B; delete[] dW; delete[] dB; delete[] activationValue; delete[] derivateActivation; delete[] outputValue; delete[] backpropagetedError;
 }
 
 void Layer::deleteAllLayer(Layer* l){

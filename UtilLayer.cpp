@@ -22,8 +22,8 @@ void trainADAM(Layer* layer, unsigned int nData, double *input, double* target, 
 	auto sampleIndex = new unsigned int[nData];
 	for (unsigned int i = 0; i < nData; i++) sampleIndex[i] = i;
 
-	delete inputLayer->outputValue;
-	delete outputLayer->targetValue;
+	delete[] inputLayer->outputValue;
+	delete[] outputLayer->targetValue;
 	for (size_t epoch = 0; epoch < nEpoch && !inputLayer->toExit; epoch++) {
 		std::cerr << '\r' << epoch;
 		

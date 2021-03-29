@@ -42,8 +42,8 @@ int main(int argc, const char *argv[]) {
 	}
 	InputFile->close();
 	if (nData <= 0) problemAndExit("No data!");
-	delete InputLayer->outputValue;
-	delete OutputLayer->targetValue;
+	delete[] InputLayer->outputValue;
+	delete[] OutputLayer->targetValue;
 	OutputLayer->targetValue = nullptr;
 	
 	if (argc < 6) {
@@ -132,7 +132,7 @@ int main(int argc, const char *argv[]) {
 	InputLayer->outputValue = nullptr;
 	OutputLayer->targetValue = nullptr;
 	Layer::deleteAllLayer(DNN);
-	delete dataInput;
-	delete dataTarget;
+	delete[] dataInput;
+	delete[] dataTarget;
 	return 0;
 }
