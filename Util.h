@@ -5,15 +5,12 @@
 #include <cmath>
 #include <iostream>
 #include <fstream> 
+#include <functional>
 #include <regex>
 #include <sstream>
 #include <string>
 #include <thread>
 #include <vector>
-
-#include <functional>
-#include <iomanip>
-#include <tuple>
 
 #ifdef _WIN32
     #include <windows.h> 
