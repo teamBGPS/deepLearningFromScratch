@@ -141,8 +141,6 @@ void expandCategories(unsigned int nData, unsigned int outputWidth, double* inpu
 	for (size_t i = 0; i < nData; i++) output[i * outputWidth + (unsigned int)(round(input[i]))] = 1.0;
 }
 
-//------------------------------------------------------------------------------------
-
 void problemAndExit(std::string message) {
 	std::cerr << message << std::endl;
 	exit(1);
