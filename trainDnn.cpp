@@ -88,13 +88,13 @@ int main(int argc, const char *argv[]) {
 		double* dataTargetCategory = nullptr;
 		expandCategories(nData, OutputLayer->width, dataTarget, dataTargetCategory);
 		trainADAM(DNN, nData, dataInput, dataTargetCategory, 32, epoch, 0.001);
-		delete dataTargetCategory;
+		delete[] dataTargetCategory;
 	}
 
 	DNN->saveAll(new std::ofstream(std::string(argv[2]) + "-" + std::to_string(modelVersionId + 1) + ".txt"), true);
 
 	Layer::deleteAllLayer(DNN);
-	delete dataInput;
-	delete dataTarget;
+	delete[] dataInput;
+	delete[] dataTarget;
 	return 0;
 }
